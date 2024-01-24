@@ -1,0 +1,9 @@
+{% load i18n %}{% blocktranslate %}Emencia request form
+
+Last name: {{ first_name }}
+First name: {{ last_name }}
+Phone: {{ phone }}
+E-mail: {{ email }}
+
+Message:
+{{ message }}{% endblocktranslate %}

@@ -1,0 +1,9 @@
+{% extends "request_form/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block app_content %}{% spaceless %}
+    <h2>{% trans "Contact form" %}</h2>
+
+    {% crispy form %}
+{% endspaceless %}{% endblock app_content %}

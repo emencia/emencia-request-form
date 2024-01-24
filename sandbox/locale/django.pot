@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-17 09:10-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: forms/forms.py:16
+msgid "You must accept data confidentiality policy."
+msgstr ""
+
+#: forms/forms.py:34
+msgid "This email address isn't allowed."
+msgstr ""
+
+#: forms/forms.py:42
+msgid "Cyrillic characters are not allowed."
+msgstr ""
+
+#: models/models.py:10 templates/request_form/form.html:25
+msgid "First name"
+msgstr ""
+
+#: models/models.py:13 templates/request_form/form.html:30
+msgid "Last name"
+msgstr ""
+
+#: models/models.py:15 templates/request_form/form.html:35
+msgid "Phone"
+msgstr ""
+
+#: models/models.py:16 templates/request_form/form.html:40
+msgid "E-mail"
+msgstr ""
+
+#: models/models.py:17 templates/request_form/form.html:45
+msgid "Message"
+msgstr ""
+
+#: models/models.py:19 templates/request_form/form.html:51
+msgid "Data confidentiality policy"
+msgstr ""
+
+#: models/models.py:26 plugins/request_form.py:13
+msgid "Emencia request form"
+msgstr ""
+
+#: models/models.py:27
+msgid "Emencia request forms"
+msgstr ""
+
+#: models/models.py:59
+msgid "Emencia request form plugin"
+msgstr ""
+
+#: models/models.py:60
+msgid "Emencia request form plugins"
+msgstr ""
+
+#: plugins/request_form.py:12
+msgid "emencia-request-form"
+msgstr ""
+
+#: templates/request_form/emails/send_email.txt:3
+#, python-format
+msgid ""
+"\n"
+"Emencia request form\n"
+"\n"
+"Last name: %(first_name)s\n"
+"First name: %(last_name)s\n"
+"Phone: %(phone)s\n"
+"E-mail: %(email)s\n"
+"\n"
+"Message:\n"
+"%(message)s\n"
+msgstr ""
+
+#: templates/request_form/form.html:15
+msgid "Contact form"
+msgstr ""
+
+#: templates/request_form/form.html:57
+msgid "Captcha"
+msgstr ""
+
+#: templates/request_form/form.html:61
+msgid "New image"
+msgstr ""
+
+#: templates/request_form/form_success.html:7
+msgid "The form has been sent!"
+msgstr ""
+
+#: utils/emails.py:28
+msgid "Website contact form"
+msgstr ""
