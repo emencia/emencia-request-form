@@ -3,7 +3,7 @@
  *
  * Note than jQuery is not required by Bootstrap and just loaded for convenience for
  * developers which can't or don't want to develop in vanilla Javascript.
-*/
+ */
 
 //
 // Make jQuery object usable inside modules
@@ -39,8 +39,22 @@ import {
     Tooltip,
 } from "bootstrap/dist/js/bootstrap.bundle.js";
 
+import { captcha } from "./components/captcha";
+
 //
 // NOTE: Sample how to instanciate a Bootstrap component object.
 //
 // var myModal = new Modal(document.getElementById("exampleModalDefault"));
 // myModal.show();
+
+/**
+ * Run the application
+ */
+
+const run = () => {
+    captcha();
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    run();
+});

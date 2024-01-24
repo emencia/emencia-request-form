@@ -1,0 +1,73 @@
+{% block body-content %}
+    {% block app_content %}
+        {% spaceless %}
+            <div class="sample-index p-5">
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+                <h2>{% trans "Contact form" %}</h2>
+
+                <div class="fobi-front">
+                    <div class="content">
+                        <form method="POST">
+                            {% csrf_token %}
+
+                            {{ form.non_field_errors }}
+                            <div class="fieldWrapper">
+                                {{ form.first_name.errors }}
+                                <label for="{{ form.first_name.id_for_label }}">{% trans "First name" %}* :</label>
+                                {{ form.first_name }}
+                            </div>
+                            <div class="fieldWrapper">
+                                {{ form.last_name.errors }}
+                                <label for="{{ form.last_name.id_for_label }}">{% trans "Last name" %}* :</label>
+                                {{ form.last_name }}
+                            </div>
+                            <div class="fieldWrapper">
+                                {{ form.phone.errors }}
+                                <label for="{{ form.phone.id_for_label }}">{% trans "Phone" %} :</label>
+                                {{ form.phone }}
+                            </div>
+                            <div class="fieldWrapper">
+                                {{ form.email.errors }}
+                                <label for="{{ form.email.id_for_label }}">{% trans "E-mail" %}* :</label>
+                                {{ form.email }}
+                            </div>
+                            <div class="fieldWrapper">
+                                {{ form.message.errors }}
+                                <label for="{{ form.message.id_for_label }}">{% trans "Message" %}* :</label>
+                                {{ form.message }}
+                            </div>
+                            <div class="fieldWrapper">
+                                {{ form.data_confidentiality_policy.errors }}
+                                <label for="{{ form.data_confidentiality_policy.id_for_label }}">
+                                    {% trans "Data confidentiality policy" %}* :
+                                </label>
+                                {{ form.data_confidentiality_policy }}
+
+                                {% comment %} {% page_url "data_confidentiality_policy" as data_confidentiality_policy_page %}
+                                {% if data_confidentiality_policy_page %}
+                                    {% include "privacy_policy/terms.html" with data_policy_url=data_confidentiality_policy_page %}
+                                {% endif %} {% endcomment %}
+                            </div>
+                            <div class="fieldWrapper mb-5">
+                                {{ form.captcha.errors }}
+                                <label for="{{ form.captcha.id_for_label }}">{% trans "Captcha" %}* :</label>
+                                {{ form.captcha }}
+                            </div>
+
+                            <button id="load-new-img">{% trans "New image" %}</button>
+                            <input type="submit" id="send-contact-form" disabled/>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        {% endspaceless %}
+    {% endblock app_content %}
+{% endblock body-content %}
