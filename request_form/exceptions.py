@@ -18,3 +18,10 @@ class AppOperationError(RequestBaseException):
     Sample exception to raise from your code.
     """
     pass
+
+
+class ControllerError(RequestBaseException):
+    """
+    When the controller encounter an error or invalid data.
+    """
+    pass

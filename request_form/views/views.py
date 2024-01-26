@@ -3,7 +3,6 @@ from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 
 from ..forms import RequestForm
-from ..models import RequestModel
 from ..utils.network import get_user_ip_address
 
 
@@ -14,7 +13,6 @@ class RequestFormView(FormView):
     When a request submit succeed, response is a redirection to ``RequestSuccessView``.
     """
     template_name = "request_form/request/form.html"
-    model = RequestModel
     form_class = RequestForm
     success_url = reverse_lazy("request_form:request-success")
 
